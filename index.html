@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+    <!-- Key Meta -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#fff"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="google" content="notranslate"/>
+    <meta name="author" content="JohnDEv19">
+    <meta name="robots" content="index, follow">
+
+    <!-- Stylesheets -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&display=swap" rel="stylesheet">
+
+    <!-- Meta Titles & Descriptions -->
+    <title>LogoMojis</title>
+    <meta name="description" content="Generate random emojis by hitting the spacebar.">
+
+    <!-- Shortcut Icons -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😊</text></svg>">
+</head>
+
+<body class="">
+
+    <!-- Navigation -->
+    <nav class="grid-nav padding">
+        <div class="col-1">
+            <form id="filterSwitchForm" class="menu-active-off form-switch">
+                <div class="onoffswitch f-left hover">
+                    <input type="hidden" name="filterSwitch" value="any" />
+                    <input type="checkbox" name="filterSwitch" class="onoffswitch-checkbox" value="mashup" id="myonoffswitch">
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+                <p class="label">Gradient</p>
+            </form>
+        </div>
+
+        <div class="col-2">
+            <p class="t-center nav-tagline">LogoMojis</p>
+        </div>
+
+        <div class="col-3">
+            <p id="about" class="js-modal-trigger link nav-about" onclick="ga('send', 'event', 'GJD', 'Modal', 'About');">About</p>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="vc-wrap t-center js-small-trigger">
+        <div class="vc-content core">
+            <div class="intro js-intro">
+                <div class="intro-1 js-intro-one t-display">LogoMojis</div>
+                <div class="intro-2">
+                    <span class="di-sm-down-off e-fast">Hit spacebar to generate an emoji 🕹️ </span>
+                    <span class="di-sm-down-on e-fast padding">Tap here for an emoji 🕹️</span>
+                </div>
+            </div>
+            <div class="js-emoji emoji t-display"></div>
+            <div class="cf"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="grid-footer padding">
+        <div class="col-1">
+            <p id="terms" class="js-modal-trigger link footer-link-terms" onclick="ga('send', 'event', 'GJD', 'Modal', 'Terms');">Terms of use</p>
+        </div>
+        <div class="col-2">
+    <p class="footer-made">Made with <span class="di-md-down-off">❤️</span> by <a class="link" href="https://m.me/IamJohnPoras.org" onclick="sendMessageToMessenger(); ga('send', 'event', 'GJD', 'Footer', 'Messenger'); return false;">@johndev19</a></p>
+</div>
+
+        <div class="col-3">
+            <div class="footer-tweet-buttons">
+                <a target="_blank" href="" class="btn">Tweet it 🐦</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="js-modal modal" id="modal-about">
+        <div class="js-modal-x x-modal padding link">Close</div>
+        <div class="padding">
+            <h3 class="t-display">About</h3>
+            <div class="modal-content">
+                <div class="cf margin"></div>
+               <p>Welcome to <strong>LogoMojis</strong>, a unique tool created by JohnDev19 that generates random emoji combinations for logo ideas. With LogoMojis, you can explore creative and fun ways to combine emojis to represent your brand or project. Let your imagination run wild and discover endless possibilities with LogoMojis!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="js-modal modal" id="modal-terms">
+        <div class="js-modal-x x-modal padding link">Close</div>
+        <div class="padding">
+            <h3 class="t-display">Terms of use</h3>
+            <div class="modal-content">
+                <div class="cf margin"></div>
+    <p>Welcome to LogoMojis, a tool designed to generate random emojis for creating logo ideas. By using LogoMojis, you agree to the following terms:</p>
+    <ol>
+        <li>LogoMojis is provided as-is and for entertainment purposes only. It does not guarantee the creation of professional logos.</li>
+        <li>You may use the emojis generated by LogoMojis for personal and non-commercial projects.</li>
+        <li>Do not use LogoMojis to create logos for commercial purposes or to infringe upon trademarks or copyrights.</li>
+        <li>LogoMojis is not responsible for any consequences resulting from the use of the generated emojis.</li>
+        <li>LogoMojis reserves the right to modify or discontinue the service at any time without prior notice.</li>
+        <li>By using LogoMojis, you agree to these terms and conditions.</li>
+    </ol>
+    <p>If you have any questions or concerns regarding LogoMojis or its terms of use, please contact us at [your contact email].</p>
+                <div class="cf push-y"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="js-overlay overlay"></div>
+    <div class="header-bg e-medium"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
