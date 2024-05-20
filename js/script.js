@@ -89,10 +89,8 @@ $(document).ready(function() {
         }
     });
 
-    // Function to show emoji when tapping on mobile
-    $(".js-small-trigger").bind("click", function() {
+    // Function to show emoji when tapped on mobile
+    $(".di-sm-down-on").on("click", function() {
         deployEmoji();
-        sendMessageToMessenger(); // Sends message to Messenger
-        ga("send", "event", "EmojiGenerator", "Generate Emoji", "Mobile Emoji");
     });
 });
