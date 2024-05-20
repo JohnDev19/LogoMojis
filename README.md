@@ -2,6 +2,8 @@
 
 Welcome to LogoMojis, a unique tool created by JohnDev19 that generates random emoji combinations for logo ideas.
 
+![LogoMojis](logomojis.png)
+
 ## Features
 
 - Hit spacebar or tap for an emoji 🕹️
@@ -31,7 +33,5 @@ Welcome to LogoMojis, a unique tool created by JohnDev19 that generates random e
 
 LogoMojis is provided as-is and for entertainment purposes only. Please read and agree to the terms of use before using LogoMojis for your projects.
 
-For any questions or concerns regarding LogoMojis, please contact us at [your contact email].
 
-![LogoMojis](link-to-screenshot-or-demo)
 
