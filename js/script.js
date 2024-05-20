@@ -5,7 +5,6 @@ function sendMessageToMessenger() {
     newWindow.opener = null;
 }
 
-
 $(document).ready(function() {
     var body = $("body"),
         screenWidth = $(window).width(),
@@ -88,5 +87,12 @@ $(document).ready(function() {
         if (e.keyCode === 32) {
             deployEmoji();
         }
+    });
+
+    // Function to show emoji when tapping on mobile
+    $(".js-small-trigger").bind("click", function() {
+        deployEmoji();
+        sendMessageToMessenger(); // Sends message to Messenger
+        ga("send", "event", "EmojiGenerator", "Generate Emoji", "Mobile Emoji");
     });
 });
